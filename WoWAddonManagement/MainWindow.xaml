@@ -1,0 +1,71 @@
+﻿<Window x:Class="WoWAddonManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WoWAddonManagement"
+        mc:Ignorable="d"
+        Title="Addon Manager" Height="600" Width="900">
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open"/>
+                    <MenuItem Header="_Close"/>
+                    <MenuItem Header="_Save"/>
+                </MenuItem>
+                <MenuItem Header="Installed Addons">
+                    <MenuItem Header="View Hidden" />
+                </MenuItem>
+                <MenuItem Header="Search/Browse Addons" />
+                <MenuItem Header="Addon Developer" />
+            </Menu>
+            <Button DockPanel.Dock="Bottom">dock 2.5</Button>
+            <Button DockPanel.Dock="Top">dock 2.2</Button>
+            <!-- <Button DockPanel.Dock="Left">dock 2.3</Button> -->
+            <TabControl TabStripPlacement="Left">
+                <TabItem Header="Installed Addons">
+                    <DataGrid Name="dataGridInstalledAddons" IsReadOnly="True" AutoGenerateColumns="False" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Addon Name" Binding="{Binding AddonName}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Installed Version" Binding="{Binding InstalledAddonVersion}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
+                            <DataGridTemplateColumn Header="Action">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button IsEnabled="False">Test</Button>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridCheckBoxColumn Header="Auto Update" Binding="{Binding AutoUpdate}"></DataGridCheckBoxColumn>
+                            <DataGridTextColumn Header="Last Check Date" Binding="{Binding LastCheckUpdate}"></DataGridTextColumn>
+                            <DataGridCheckBoxColumn Header="Hide" Binding="{Binding IsHidden}"></DataGridCheckBoxColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Search Addons" />
+                <TabItem Header="Addon Developer" />
+                <TabItem Header="Preferences">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,15,5,5">WoW Location:</TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1" Margin="0,15,5,5" Name="TextBoxWoWLocation" Text="" />
+                        <Button Grid.Row="0" Grid.Column="2" Margin="5,15,5,5" Name="ButtonBrowseWoWLocation" Click="ButtonBrowseWoWLocation_Click">Browse...</Button>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+
+        </DockPanel>
+
+    </Grid>
+</Window>
