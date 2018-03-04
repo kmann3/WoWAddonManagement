@@ -1,21 +1,17 @@
 # WoWAddonManagement
-WoW Addon Manager
 
-
-## Goals
+### Goals
 
 ### Overview
 
 * Lean UI. Quick to load. Curse was not quick and Twitch doesn't feel great.
 * Easier ability bo have people help.
 
-
 ### Installed addons management
 
 * Simple automatic update. Adjustable to turn off specific addons or hide them.
 * If a change is detected then offer to make a pull request for changes. Required to note changes however.
 * If ran in the background, can regularly check for updates and alert the user so they don't find out after loading WoW.
-
 
 ### Search Addons
 
