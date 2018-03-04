@@ -20,8 +20,11 @@
                 <MenuItem Header="Search/Browse Addons" />
                 <MenuItem Header="Addon Developer" />
             </Menu>
-            <Button DockPanel.Dock="Bottom">dock 2.5</Button>
-            <Button DockPanel.Dock="Top">dock 2.2</Button>
+            <StatusBar DockPanel.Dock="Bottom">
+                <StatusBarItem>
+                    <TextBlock Name="TextBlockStatus" Text="Status: Done." />
+                </StatusBarItem>
+            </StatusBar>
             <!-- <Button DockPanel.Dock="Left">dock 2.3</Button> -->
             <TabControl TabStripPlacement="Left">
                 <TabItem Header="Installed Addons">
@@ -43,8 +46,21 @@
                         </DataGrid.Columns>
                     </DataGrid>
                 </TabItem>
-                <TabItem Header="Search Addons" />
-                <TabItem Header="Addon Developer" />
+                <TabItem Header="Search Addons">
+                    <!--
+                        - Create groups
+                        - How to search a repo? Should there be a local database? How would that be maintained?
+                        - Ability to search for only current WoW version addons? Is that even useful?
+                        - Ability to find abandoned addons? Or should that be moved to Addon Developer?
+                    -->
+                </TabItem>
+                <TabItem Header="Addon Developer">
+                    <!-- 
+                    Stuff to help an addon dev manage their repo.
+                        - How to handle pull requests?
+                        - ...
+                    -->
+                </TabItem>
                 <TabItem Header="Preferences">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -60,7 +76,7 @@
 
                         <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,15,5,5">WoW Location:</TextBlock>
                         <TextBox Grid.Row="0" Grid.Column="1" Margin="0,15,5,5" Name="TextBoxWoWLocation" Text="" />
-                        <Button Grid.Row="0" Grid.Column="2" Margin="5,15,5,5" Name="ButtonBrowseWoWLocation" Click="ButtonBrowseWoWLocation_Click">Browse...</Button>
+                        <Button Grid.Row="0" Grid.Column="2" Margin="5,15,5,5" Name="ButtonBrowseWoWLocation">Browse...</Button>
                     </Grid>
                 </TabItem>
             </TabControl>
