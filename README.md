@@ -17,7 +17,7 @@
 
 * Search Catageories: Auction & Economy, Classes (specific addons to each), PvP,  (TBI: Enumerate full list)
 * Display basic information of addons without actually having to load a browser. Screen shots and more detailed information will require them browse to the repository.
-* Search database or hashtag on git hub? Perhaps just allow for DLL's and call a method instead to allow for plugins?
+* Search hastag (TBI: search dll for plugins). [#wam-addon](https://api.github.com/search/repositories?q=wam-addon&order=desc)
 * Maintain a databaase that can be downloaded. Database is in SQLite making it open and easy for anyone to fork this project and handle their own.
 
 ### Addon Developer assistance
