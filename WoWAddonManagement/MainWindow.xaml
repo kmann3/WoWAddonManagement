@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WoWAddonManagement"
         mc:Ignorable="d"
-        Title="Addon Manager" Height="600" Width="900">
+        Title="Addon Manager"  MinHeight="600" Height="600" MinWidth="900" Width="900" >
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
@@ -33,7 +33,7 @@
                             <DataGridTemplateColumn Header="">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Image Width="50" Height="50" />
+                                        <Image Width="100" Height="100" />
                                         <!-- Green dot indicates if addon has updated behind the scenes to identify to user changes -->
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
@@ -58,8 +58,8 @@
                     <StackPanel Orientation="Vertical">
                         <StackPanel Orientation="Horizontal">
                             <Label>Search:</Label>
-                            <TextBox MinWidth="200"></TextBox>
-                            <ComboBox MinWidth="150">
+                            <TextBox MinWidth="200" Margin="5,5,5,5"></TextBox>
+                            <ComboBox MinWidth="150" Margin="5,5,5,5">
                                 <ComboBoxItem>All</ComboBoxItem>
                                 <ComboBoxItem>Auction and Economy</ComboBoxItem>
                                 <ComboBoxItem>Bags &amp; Inventory</ComboBoxItem>
@@ -86,7 +86,7 @@
                                 <ComboBoxItem>PvP - Battelground</ComboBoxItem>
                                 <ComboBoxItem>Unit Frame</ComboBoxItem>
                             </ComboBox>
-                            <Button>Submit</Button>
+                            <Button Margin="5,5,5,5" Name="ButtonSearch">Submit</Button>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
                             <DataGrid Name="SearchAddons" IsReadOnly="True" AutoGenerateColumns="False" >
