@@ -15,7 +15,9 @@
                 <MenuItem Header="Installed Addons">
                     <MenuItem Header="View Hidden" />
                 </MenuItem>
-                <MenuItem Header="Search/Browse Addons" />
+                <MenuItem Header="Search/Browse Addons">
+                    <MenuItem Header="Install from Url" />
+                </MenuItem>
                 <MenuItem Header="Addon Developer" />
             </Menu>
             <StatusBar DockPanel.Dock="Bottom">
@@ -28,6 +30,14 @@
                 <TabItem Header="Installed Addons">
                     <DataGrid Name="DataGridInstalledAddons" IsReadOnly="True" AutoGenerateColumns="False" >
                         <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Width="50" Height="50" />
+                                        <!-- Green dot indicates if addon has updated behind the scenes to identify to user changes -->
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
                             <DataGridTextColumn Header="Addon Name" Binding="{Binding AddonName}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Installed Version" Binding="{Binding InstalledAddonVersion}"></DataGridTextColumn>
                             <DataGridTextColumn Header="Status" Binding="{Binding Status}"></DataGridTextColumn>
@@ -45,12 +55,6 @@
                     </DataGrid>
                 </TabItem>
                 <TabItem Header="Search Addons">
-                    <!--
-                        - Create groups
-                        - How to search a repo? Should there be a local database? How would that be maintained?
-                        - Ability to search for only current WoW version addons? Is that even useful?
-                        - Ability to find abandoned addons? Or should that be moved to Addon Developer?
-                    -->
                     <StackPanel Orientation="Vertical">
                         <StackPanel Orientation="Horizontal">
                             <Label>Search:</Label>
@@ -110,32 +114,30 @@
                     </StackPanel>
                 </TabItem>
                 <TabItem Header="Addon Developer">
-                    <!-- 
-                    Stuff to help an addon dev manage their repo.
-                        - How to handle pull requests?
-                        - ...
-                    -->
+
                 </TabItem>
                 <TabItem Header="Preferences">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-
-                        </Grid.RowDefinitions>
-
-                        <TextBlock Grid.Row="0" Grid.Column="0" Margin="5,15,5,5">WoW Location:</TextBlock>
-                        <TextBox Grid.Row="0" Grid.Column="1" Margin="0,15,5,5" Name="TextBoxWoWLocation" Text="" />
-                        <Button Grid.Row="0" Grid.Column="2" Margin="5,15,5,5" Name="ButtonBrowseWoWLocation">Browse...</Button>
-                    </Grid>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5,15,5,5">WoW Location:</TextBlock>
+                            <TextBox Margin="0,15,5,5" MinWidth="200" Name="TextBoxWoWLocation" Text="" />
+                            <Button Margin="5,15,5,5" Name="ButtonBrowseWoWLocation">Browse...</Button>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5,15,5,5">Auto update all addons:</TextBlock>
+                            <CheckBox Margin="5,15,5,5" Name="CheckBoxUpdateAllAddonsAutomatically" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="5,5,0,0" >Update check frequency:</TextBlock>
+                            <ComboBox Margin="5,5,0,0"  MinWidth="75" Name="ComboBoxUpdateCheckFrequency">
+                                <ComboBoxItem>Daily</ComboBoxItem>
+                                <ComboBoxItem>Every other day</ComboBoxItem>
+                                <ComboBoxItem>Weekly</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </StackPanel>
                 </TabItem>
             </TabControl>
-
         </DockPanel>
 
     </Grid>
