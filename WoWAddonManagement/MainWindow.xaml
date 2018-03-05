@@ -25,7 +25,7 @@
                     <TextBlock Name="TextBlockStatus" Text="Status: Done." />
                 </StatusBarItem>
             </StatusBar>
-            <!-- <Button DockPanel.Dock="Left">dock 2.3</Button> -->
+            <!-- <Button DockPanel.Dock="Left">Place holder in case needed. </Button> -->
             <TabControl TabStripPlacement="Left">
                 <TabItem Header="Installed Addons">
                     <DataGrid Name="DataGridInstalledAddons" IsReadOnly="True" AutoGenerateColumns="False" >
