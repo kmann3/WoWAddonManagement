@@ -62,7 +62,7 @@
                             <ComboBox MinWidth="150">
                                 <ComboBoxItem>All</ComboBoxItem>
                                 <ComboBoxItem>Auction and Economy</ComboBoxItem>
-                                <ComboBoxItem>Bags & Inventory</ComboBoxItem>
+                                <ComboBoxItem>Bags &amp; Inventory</ComboBoxItem>
                                 <ComboBoxItem>Chat</ComboBoxItem>
                                 <ComboBoxItem>Class - Death Knight</ComboBoxItem>
                                 <ComboBoxItem>Class - Demon Hunter</ComboBoxItem>
