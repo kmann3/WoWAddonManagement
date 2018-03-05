@@ -62,8 +62,29 @@
                             <ComboBox MinWidth="150">
                                 <ComboBoxItem>All</ComboBoxItem>
                                 <ComboBoxItem>Auction and Economy</ComboBoxItem>
+                                <ComboBoxItem>Bags & Inventory</ComboBoxItem>
+                                <ComboBoxItem>Chat</ComboBoxItem>
+                                <ComboBoxItem>Class - Death Knight</ComboBoxItem>
                                 <ComboBoxItem>Class - Demon Hunter</ComboBoxItem>
-                                <ComboBoxItem>PvP</ComboBoxItem>
+                                <ComboBoxItem>Class - Druid</ComboBoxItem>
+                                <ComboBoxItem>Class - Hunter</ComboBoxItem>
+                                <ComboBoxItem>Class - Mage</ComboBoxItem>
+                                <ComboBoxItem>Class - Monk</ComboBoxItem>
+                                <ComboBoxItem>Class - Paladin</ComboBoxItem>
+                                <ComboBoxItem>Class - Priest</ComboBoxItem>
+                                <ComboBoxItem>Class - Rogue</ComboBoxItem>
+                                <ComboBoxItem>Class - Shaman</ComboBoxItem>
+                                <ComboBoxItem>Class - Warlock</ComboBoxItem>
+                                <ComboBoxItem>Class - Warrior</ComboBoxItem>
+                                <ComboBoxItem>Data Export</ComboBoxItem>
+                                <ComboBoxItem>Libraries</ComboBoxItem>
+                                <ComboBoxItem>Mail</ComboBoxItem>
+                                <ComboBoxItem>Map</ComboBoxItem>
+                                <ComboBoxItem>Minimap</ComboBoxItem>
+                                <ComboBoxItem>Professions</ComboBoxItem>
+                                <ComboBoxItem>PvP - Arena</ComboBoxItem>
+                                <ComboBoxItem>PvP - Battelground</ComboBoxItem>
+                                <ComboBoxItem>Unit Frame</ComboBoxItem>
                             </ComboBox>
                             <Button>Submit</Button>
                         </StackPanel>
