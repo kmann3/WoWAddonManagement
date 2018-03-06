@@ -12,6 +12,8 @@
 * Easier ability to have people help via pull requests instead of having to rely on comments.
 * Learn WPF because I'm curious if it's better than WinForms. Considered Universal Windows but that's too restrictuve due to Windows 10 only.
 * Will consider Mac once the back-end is solidified.
+* _But why Git?_: For the ability to fork, have pull requests, and issue tracking. The ultimate goal is to have the app assist in this so users can more easily communicate with devs, somehow. I haven't sorted all this out yet.
+* _Isn't this going to be too complicated for users?_: The goal is to make it easy. If it can't be figured out how to make it super easy then this project will fail. The most complicated, that I feel is acceptable, is to make a github account. Everything outside of that should be able to be handled by the app outside of the more complicated tasks more advanced people would be interested in.
 
 ### Installed addons management
 
