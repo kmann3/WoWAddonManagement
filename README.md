@@ -5,7 +5,9 @@
 ### Overview
 
 * Lean UI. Quick to load. Curse was not quick and Twitch doesn't feel great.
-* Easier ability bo have people help.
+* Easier ability to have people help via pull requests instead of having to rely on comments.
+* Learn WPF because I'm curious if it's better than WinForms. Considered Universal Windows but that's too restrictuve due to Windows 10 only.
+* Will consider Mac once the back-end is solidified.
 
 ### Installed addons management
 
