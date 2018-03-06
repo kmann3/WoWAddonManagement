@@ -1,5 +1,9 @@
 # WoWAddonManagement
 
+### Screen shots
+
+[Here is the Imgur album](https://imgur.com/a/ZnI5j) as of March 6, 2018.
+
 ### Goals
 
 ### Overview
