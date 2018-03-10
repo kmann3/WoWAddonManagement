@@ -157,7 +157,8 @@
                             </ComboBox>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Button Margin="5,15,0,0">Export Installed Addon List</Button>
+                            <Button Margin="5,15,0,0">Export / Backup Installed Addon List</Button>
+                            <Button Margin="5,15,0,0">Export list for human reading</Button>
                             <Button Margin="5,15,0,0">Import Installed Addon List</Button>
                         </StackPanel>
                     </StackPanel>
