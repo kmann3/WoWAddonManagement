@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoWAddonManagement", "WoWAddonManagement\WoWAddonManagement.csproj", "{A69DE337-CE9F-4921-87D9-F491B518FDF5}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibGit2Sharp", "..\libgit2sharp\LibGit2Sharp\LibGit2Sharp.csproj", "{BFEB6802-8089-4AD0-A45A-3938027CC5B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A69DE337-CE9F-4921-87D9-F491B518FDF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A69DE337-CE9F-4921-87D9-F491B518FDF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A69DE337-CE9F-4921-87D9-F491B518FDF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEB6802-8089-4AD0-A45A-3938027CC5B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFEB6802-8089-4AD0-A45A-3938027CC5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFEB6802-8089-4AD0-A45A-3938027CC5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEB6802-8089-4AD0-A45A-3938027CC5B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

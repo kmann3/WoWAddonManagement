@@ -1,11 +1,11 @@
-﻿<Window x:Class="WoWAddonManagement.MainWindow"
+﻿<Window x:Name="MainForm" x:Class="WoWAddonManagement.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WoWAddonManagement"
         mc:Ignorable="d"
-        Title="Addon Manager"  MinHeight="600" Height="600" MinWidth="900" Width="900" >
+        Title="Addon Manager"  MinHeight="600" Height="600" MinWidth="900" Width="900" Closing="MainForm_Closing" >
     <Grid>
         <DockPanel>
             <Menu DockPanel.Dock="Top">

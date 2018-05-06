@@ -20,9 +20,20 @@ namespace WoWAddonManagement
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+
+            Properties.Settings.Default.UpdateCheckFrequency = 2;//(int)uf;
+            Properties.Settings.Default.WoWLocation = this.TextBoxWoWLocation.Text;
+            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.Upgrade();
+        }
+
     }
 }
