@@ -1,0 +1,9 @@
+<#@ template language="C#" debug="True" hostSpecific="True"                        #>
+<#@ output extension=".generated.cs"                                               #>
+<#@ include file="$(ProjectDir)LinqToDB.Templates\LinqToDB.SQLite.Tools.ttinclude" #>
+<#@ include file="$(ProjectDir)LinqToDB.Templates\PluralizationService.ttinclude"  #>
+<#
+	NamespaceName = "DataModels";
+	LoadSQLiteMetadata(@"D:\repo\WoWAddonManagement\WoWAddonManagement", "AddonDb.sqlite3");
+	GenerateModel();
+#>

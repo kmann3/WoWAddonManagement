@@ -35,5 +35,10 @@ namespace WoWAddonManagement
             //Properties.Settings.Default.Upgrade();
         }
 
+        private void Button_BackupAddonList_Click(object sender, RoutedEventArgs e)
+        {
+            var foo = DAL.AddonDatabase.InsertAddonIntoDatabase("Saved Instances", "https://github.com/SavedInstances/SavedInstances");
+            MessageBox.Show("inserted with guid: " + foo.ToString());
+        }
     }
 }
