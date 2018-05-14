@@ -24,6 +24,12 @@ namespace WoWAddonManagement
         public MainWindow()
         {
             InitializeComponent();
+
+            foreach(var foo in DAL.Addons.AddonList)
+            {
+                Console.Write(foo.GitUrl.AbsolutePath);
+                Console.Read();
+            }
         }
 
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -37,8 +43,8 @@ namespace WoWAddonManagement
 
         private void Button_BackupAddonList_Click(object sender, RoutedEventArgs e)
         {
-            var foo = DAL.ManagerDatabase.InsertAddonIntoDatabase("Saved Instances", "https://github.com/SavedInstances/SavedInstances");
-            MessageBox.Show("inserted with guid: " + foo.ToString());
+            //var foo = DAL.ManagerDatabase.InsertAddonIntoDatabase("Saved Instances", "https://github.com/SavedInstances/SavedInstances");
+            //MessageBox.Show("inserted with guid: " + foo.ToString());
         }
     }
 }

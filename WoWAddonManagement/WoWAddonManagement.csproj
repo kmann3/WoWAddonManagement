@@ -158,6 +158,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="AddonList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="DataModels\AddonManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AddonManager.generated.cs</LastGenOutput>

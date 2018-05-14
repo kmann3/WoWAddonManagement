@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Addons>
+  <Addon>
+    <GUID>6a42fccf-b732-41af-81f7-7000dbd895f0</GUID>
+    <Name>SavedInstances</Name>
+    <GitUrl>https://github.com/SavedInstances/SavedInstances</GitUrl>
+    <Categories>Raid;Dungeon</Categories>
+    <Description>Manages blah blah</Description>
+  </Addon>
+</Addons>

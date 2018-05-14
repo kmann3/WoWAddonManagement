@@ -11,18 +11,9 @@ namespace WoWAddonManagement.DAL
     {
         public static Guid InsertAddonIntoDatabase(string addonName, string gitUrl)
         {
-            using (var dbContext = new DataModels.AddonDbDB())
+            using (var dbContext = new DataModels.ManagerDatabaseDB())
             {
-                Guid newId = Guid.NewGuid();
-
-                DataModels.Addon newAddon = new DataModels.Addon();
-                newAddon.AddonGuid = newId.ToString();
-                newAddon.AddonName = addonName;
-                newAddon.GitUrl = gitUrl;
-
-                dbContext.Insert(newAddon);
-
-                return newId;
+                return Guid.NewGuid();
             }
         }
     }
