@@ -4,6 +4,6 @@
 <#@ include file="$(ProjectDir)LinqToDB.Templates\PluralizationService.ttinclude"  #>
 <#
 	NamespaceName = "DataModels";
-	LoadSQLiteMetadata(@"D:\repo\WoWAddonManagement\WoWAddonManagement", "AddonDb.sqlite3");
+	LoadSQLiteMetadata(@"D:\repo\WoWAddonManagement\WoWAddonManagement", "ManagerDatabase.sqlite3");
 	GenerateModel();
 #>

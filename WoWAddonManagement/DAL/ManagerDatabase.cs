@@ -7,7 +7,7 @@ using LinqToDB;
 
 namespace WoWAddonManagement.DAL
 {
-    public class AddonDatabase
+    public class ManagerDatabase
     {
         public static Guid InsertAddonIntoDatabase(string addonName, string gitUrl)
         {
@@ -19,7 +19,7 @@ namespace WoWAddonManagement.DAL
                 newAddon.AddonGuid = newId.ToString();
                 newAddon.AddonName = addonName;
                 newAddon.GitUrl = gitUrl;
-                
+
                 dbContext.Insert(newAddon);
 
                 return newId;

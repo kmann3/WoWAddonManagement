@@ -69,17 +69,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddonManagement.cs" />
-    <Compile Include="DAL\AddonDatabase.cs" />
-    <Compile Include="DataModels\AddonDbDataModels.generated.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Include="DAL\AddonList.cs" />
+    <Compile Include="DAL\ManagerDatabase.cs" />
+    <Compile Include="DataModels\AddonManager.generated.cs">
+      <DependentUpon>AddonManager.tt</DependentUpon>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AddonDbDataModels.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataModels\AddonManagerDataModels1.generated.cs">
       <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AddonManagerDataModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Preferences.cs" />
     <Compile Include="Settings.cs" />
@@ -114,10 +109,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AddonDb.sqlite3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="AddonManager.sqlite3">
+    <None Include="ManagerDatabase.sqlite3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="LinqToDB.Templates\DataAnnotations.ttinclude" />
@@ -166,15 +158,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataModels\AddonDbDataModels.tt">
+    <Content Include="DataModels\AddonManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AddonDbDataModels.generated.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="DataModels\AddonManagerDataModels.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>AddonManagerDataModels1.generated.cs</LastGenOutput>
+      <LastGenOutput>AddonManager.generated.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

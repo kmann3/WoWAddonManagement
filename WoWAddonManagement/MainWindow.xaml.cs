@@ -37,7 +37,7 @@ namespace WoWAddonManagement
 
         private void Button_BackupAddonList_Click(object sender, RoutedEventArgs e)
         {
-            var foo = DAL.AddonDatabase.InsertAddonIntoDatabase("Saved Instances", "https://github.com/SavedInstances/SavedInstances");
+            var foo = DAL.ManagerDatabase.InsertAddonIntoDatabase("Saved Instances", "https://github.com/SavedInstances/SavedInstances");
             MessageBox.Show("inserted with guid: " + foo.ToString());
         }
     }
