@@ -25,11 +25,11 @@ namespace WoWAddonManagement
         {
             InitializeComponent();
 
-            foreach(var foo in DAL.Addons.AddonList)
+            /*foreach(var foo in DAL.Addons.AddonList)
             {
                 Console.Write(foo.GitUrl.AbsolutePath);
                 Console.Read();
-            }
+            }*/
         }
 
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
@@ -45,6 +45,8 @@ namespace WoWAddonManagement
         {
             //var foo = DAL.ManagerDatabase.InsertAddonIntoDatabase("Saved Instances", "https://github.com/SavedInstances/SavedInstances");
             //MessageBox.Show("inserted with guid: " + foo.ToString());
+            var foo = DAL.Addons.AddonList;
+            var foo2 = DAL.ManagerDatabase.InsertAddonIntoDatabase("Foo", "foo");
         }
     }
 }

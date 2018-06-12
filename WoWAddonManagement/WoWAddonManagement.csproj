@@ -71,6 +71,11 @@
     </ApplicationDefinition>
     <Compile Include="DAL\AddonList.cs" />
     <Compile Include="DAL\ManagerDatabase.cs" />
+    <Compile Include="DataModels\AddonList.generated.cs">
+      <DependentUpon>AddonList.tt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="DataModels\AddonManager.generated.cs">
       <DependentUpon>AddonManager.tt</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -109,6 +114,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="AddonList.sqlite3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="ManagerDatabase.sqlite3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -158,9 +166,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="AddonList.xml">
+    <None Include="AddonList.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </None>
+    <Content Include="DataModels\AddonList.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>AddonList.generated.cs</LastGenOutput>
+    </Content>
     <Content Include="DataModels\AddonManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>AddonManager.generated.cs</LastGenOutput>

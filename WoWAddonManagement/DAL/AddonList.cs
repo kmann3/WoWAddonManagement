@@ -27,53 +27,15 @@ namespace WoWAddonManagement.DAL
             }
         }
 
-        private static void LoadAddonList()
+        private static List<Addon> LoadAddonList()
         {
-            /* Download the file */
-
-            /* Parse the file */
-            _addonList = new List<Addon>();
-            XElement xelement = XElement.Load("AddonList.xml");
-            IEnumerable<XElement> addons = xelement.Elements();
-
-            foreach (var addon in addons)
+            List<Addon> loadList = new List<Addon>();
+            using (var dbContext = new DataModels.AddonListDB("AddonList"))
             {
-                Addon newAddon = new Addon();
-                newAddon.Name = addon.Element("Name").Value;
-
-                Guid id;
-                if (Guid.TryParse(addon.Element("GUID").Value, out id))
-                {
-                    newAddon.Id = id;
-
-                }
-                else
-                {
-                    throw new Exception("Invalid GUID");
-                }
-
-                newAddon.GitUrl = new Uri(addon.Element("GitUrl").Value);
-                if (newAddon.GitUrl.IsAbsoluteUri == false)
-                {
-                    throw new Exception("Invalid Git URL");
-                }
-
-                newAddon.Description = addon.Element("Description").Value;
-                string categories = addon.Element("Categories").Value;
-                if (String.IsNullOrEmpty(categories) == false)
-                {
-                    newAddon.Categories = new List<string>();
-                    foreach (string category in categories.Split(';'))
-                    {
-                        newAddon.Categories.Add(category);
-                    }
-
-                }
-
-                _addonList.Add(newAddon);
+                var foo = from d in dbContext.Addons orderby d.AddonName select d;
+                var foo2 = foo.ToList();
+                return null;
             }
-
-            _addonList.Sort((x, y) => x.Name.CompareTo(y.Name));
         }
 
         /// <summary>
