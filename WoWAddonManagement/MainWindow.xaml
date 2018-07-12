@@ -138,6 +138,25 @@
 
                 </TabItem>
                 <TabItem Header="Preferences">
+                    <!--<Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Grid.Column="0" Grid.Row="0" Margin="5,15,5,5" Name="LabelWoWLocation">WoW Location:</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="0" Margin="5,15,5,5" MinWidth="200" Name="TextBoxWoWLocation" Text="This is a test" />
+                        <Button Grid.Column="2" Grid.Row="0" Margin="5,15,5,5" Name="ButtonBrowseWoWLocation" MaxWidth="50" HorizontalAlignment="Left">Browse...</Button>
+
+                        <TextBlock Grid.Column="0" Grid.Row="1" Margin="5,15,5,5" Name="z" TextWrapping="Wrap">WoW Locationp sum delta beta ithso Lorum ipsem ergo ehgo braj do:</TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="1" Margin="5,15,5,5" MinWidth="200" Name="zz" Text="This is a test" />
+                        <Button Grid.Column="2" Grid.Row="1" Margin="5,15,5,5" Name="zzz" MaxWidth="50" HorizontalAlignment="Left">Browse...</Button>
+                    </Grid> -->
                     <StackPanel Orientation="Vertical">
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Margin="5,15,5,5">WoW Location:</TextBlock>
@@ -149,7 +168,7 @@
                             <CheckBox Margin="5,15,5,5" Name="CheckBoxUpdateAllAddonsAutomatically" />
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="5,15,0,0" >Update check frequency:</TextBlock>
+                            <TextBlock Margin="5,15,0,0">Update check frequency:</TextBlock>
                             <ComboBox Margin="5,15,0,0"  MinWidth="75" Name="ComboBoxUpdateCheckFrequency">
                                 <ComboBoxItem>Daily</ComboBoxItem>
                                 <ComboBoxItem>Every other day</ComboBoxItem>
@@ -157,9 +176,15 @@
                             </ComboBox>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal">
-                            <Button Margin="5,15,0,0" Click="Button_BackupAddonList_Click" Name="Button_BackupAddonList">Export / Backup Installed Addon List</Button>
-                            <Button Margin="5,15,0,0">Export list for human reading</Button>
-                            <Button Margin="5,15,0,0">Import Installed Addon List</Button>
+                            <TextBlock Margin="5,15,0,0">Enable Statistics tracking: </TextBlock>
+                            <CheckBox Margin="5,15,5,5" Name="CheckBoxEnableStatisticsTracking" />
+                            <TextBlock Margin="5,15,0,0" MaxWidth="300" FontSize="10" TextWrapping="Wrap">(Nothing personal is sent back, this is simply to track install / uninstall numbers of addons to help you know which are popular.)</TextBlock>
+
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Button Margin="5,15,5,0" Click="Button_BackupAddonList_Click" Name="Button_BackupAddonList">Export / Backup Installed Addon List</Button>
+                            <Button Margin="5,15,5,0">Export list for human reading</Button>
+                            <Button Margin="5,15,5,0">Import Installed Addon List</Button>
                         </StackPanel>
                     </StackPanel>
                 </TabItem>

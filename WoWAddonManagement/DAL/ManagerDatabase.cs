@@ -7,8 +7,13 @@ using LinqToDB;
 
 namespace WoWAddonManagement.DAL
 {
-    public class ManagerDatabase
+    public partial class ManagerDatabase
     {
+        public static void SaveSettings(string addonId)
+        {
+
+        }
+
         public static Guid InsertAddonIntoDatabase(string addonName, string gitUrl)
         {
             using (var dbContext = new DataModels.ManagerDatabaseDB("AddonManager"))

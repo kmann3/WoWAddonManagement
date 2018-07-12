@@ -1,0 +1,9 @@
+<#@ template language="C#" debug="True" hostSpecific="True"                        #>
+<#@ output extension=".generated.cs"                                               #>
+<#@ include file="$(ProjectDir)LinqToDB.Templates\LinqToDB.SQLite.Tools.ttinclude" #>
+<#@ include file="$(ProjectDir)LinqToDB.Templates\PluralizationService.ttinclude"  #>
+<#
+	NamespaceName = "WAM_Core.DataModels";
+	LoadSQLiteMetadata(@"D:\repo\WoWAddonManagement\WAM_Core", "WAM_DB.sqlite3");
+	GenerateModel();
+#>

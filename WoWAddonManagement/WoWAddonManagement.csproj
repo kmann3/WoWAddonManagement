@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\linq2db.SQLite.2.1.0\build\linq2db.SQLite.props" Condition="Exists('..\packages\linq2db.SQLite.2.1.0\build\linq2db.SQLite.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -42,8 +43,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="linq2db, Version=1.10.2.0, Culture=neutral, PublicKeyToken=f19f8aed7feff67e, processorArchitecture=MSIL">
-      <HintPath>..\packages\linq2db.1.10.2\lib\net45\linq2db.dll</HintPath>
+    <Reference Include="linq2db, Version=2.1.0.0, Culture=neutral, PublicKeyToken=e41013125f9e410a, processorArchitecture=MSIL">
+      <HintPath>..\packages\linq2db.2.1.0\lib\net45\linq2db.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -70,6 +71,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="DAL\AddonList.cs" />
+    <Compile Include="DAL\AddonManagerSettings.cs" />
     <Compile Include="DAL\ManagerDatabase.cs" />
     <Compile Include="DataModels\AddonList.generated.cs">
       <DependentUpon>AddonList.tt</DependentUpon>
@@ -114,9 +116,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="AddonList.sqlite3">
+    <None Include="AddonLibrary.sqlite3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="LinqToDB.Templates\LinqToDB.SQLite.Tools.ttinclude" />
     <None Include="ManagerDatabase.sqlite3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -133,7 +136,6 @@
     <None Include="LinqToDB.Templates\LinqToDB.PostgreSQL.ttinclude" />
     <None Include="LinqToDB.Templates\LinqToDB.SapHana.ttinclude" />
     <None Include="LinqToDB.Templates\LinqToDB.SqlCe.ttinclude" />
-    <None Include="LinqToDB.Templates\LinqToDB.SQLite.Tools.ttinclude" />
     <None Include="LinqToDB.Templates\LinqToDB.SQLite.ttinclude" />
     <None Include="LinqToDB.Templates\LinqToDB.SqlServer.SqlTypes.ttinclude" />
     <None Include="LinqToDB.Templates\LinqToDB.SqlServer.ttinclude" />
@@ -166,6 +168,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
     <None Include="AddonList.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -188,5 +191,6 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.108.0\build\net46\System.Data.SQLite.Core.targets'))" />
+    <Error Condition="!Exists('..\packages\linq2db.SQLite.2.1.0\build\linq2db.SQLite.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\linq2db.SQLite.2.1.0\build\linq2db.SQLite.props'))" />
   </Target>
 </Project>

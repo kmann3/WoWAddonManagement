@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WoWAddonManagement", "WoWAd
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibGit2Sharp", "..\libgit2sharp\LibGit2Sharp\LibGit2Sharp.csproj", "{BFEB6802-8089-4AD0-A45A-3938027CC5B6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAM_Core", "WAM_Core\WAM_Core.csproj", "{DEBB430F-F4FD-487D-B2C4-C1C0BBC6BBCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WAM_CLI", "WAM_CLI\WAM_CLI.csproj", "{464E3FAF-949A-4665-BF4B-7508DC48CF8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{BFEB6802-8089-4AD0-A45A-3938027CC5B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFEB6802-8089-4AD0-A45A-3938027CC5B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFEB6802-8089-4AD0-A45A-3938027CC5B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEBB430F-F4FD-487D-B2C4-C1C0BBC6BBCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEBB430F-F4FD-487D-B2C4-C1C0BBC6BBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEBB430F-F4FD-487D-B2C4-C1C0BBC6BBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEBB430F-F4FD-487D-B2C4-C1C0BBC6BBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{464E3FAF-949A-4665-BF4B-7508DC48CF8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464E3FAF-949A-4665-BF4B-7508DC48CF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464E3FAF-949A-4665-BF4B-7508DC48CF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464E3FAF-949A-4665-BF4B-7508DC48CF8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

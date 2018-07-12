@@ -25,28 +25,25 @@ namespace WoWAddonManagement
         {
             InitializeComponent();
 
-            /*foreach(var foo in DAL.Addons.AddonList)
-            {
-                Console.Write(foo.GitUrl.AbsolutePath);
-                Console.Read();
-            }*/
         }
 
         private void MainForm_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-
-            Properties.Settings.Default.UpdateCheckFrequency = 2;//(int)uf;
-            Properties.Settings.Default.WoWLocation = this.TextBoxWoWLocation.Text;
-            Properties.Settings.Default.Save();
-            //Properties.Settings.Default.Upgrade();
+            
         }
 
         private void Button_BackupAddonList_Click(object sender, RoutedEventArgs e)
         {
             //var foo = DAL.ManagerDatabase.InsertAddonIntoDatabase("Saved Instances", "https://github.com/SavedInstances/SavedInstances");
             //MessageBox.Show("inserted with guid: " + foo.ToString());
-            var foo = DAL.Addons.AddonList;
-            var foo2 = DAL.ManagerDatabase.InsertAddonIntoDatabase("Foo", "foo");
+            //List<DAL.Addons.Addon> foo = DAL.Addons.AddonList;
+            //var foo2 = DAL.ManagerDatabase.InsertAddonIntoDatabase("Foo", "foo");
+            //var foo = DAL.AddonManagerSettings.AutoUpdateAllAddons;
+            DAL.AddonManagerSettings.AutoUpdateAllAddons = true;
+            DAL.AddonManagerSettings.EnableStatisticsTracking = true;
+            DAL.AddonManagerSettings.UpdateFrquency = DAL.AddonManagerSettings.UpdateFrquencyTypes.Daily;
+            DAL.AddonManagerSettings.WoWLocation = @"C:\Games\World of Warcraft";
+
         }
     }
 }
