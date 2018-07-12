@@ -10,8 +10,10 @@ namespace WAM_CLI
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("AutoUpdateFrequency: {0}", WAM_Core.DataModels.Setting.AutoUpdateFrequency);
-            Console.Read();
+            var foo = WAM_Core.DataModels.Setting.AutoUpdateFrequency;
+            WAM_Core.DataModels.Setting.AutoUpdateFrequency = WAM_Core.DataModels.Setting.UpdateFrquencyTypes.Daily;
+            var foo3 = WAM_Core.DataModels.Setting.AutoUpdateFrequency;
+            int i = 0;
         }
     }
 }

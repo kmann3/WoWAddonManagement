@@ -176,6 +176,10 @@ namespace WAM_Core.DataModels
                 {
                     DataModels.Setting newSetting = new Setting() { SettingName = settingName.ToString(), SettingValue = settingValue };
                     dbContext.Insert(newSetting);
+                } else
+                {
+                    returnSetting.SettingValue = settingValue;
+                    dbContext.Update(returnSetting);
                 }
             }
         }

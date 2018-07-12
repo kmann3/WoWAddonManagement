@@ -50,8 +50,9 @@ namespace WAM_Core.DataModels
 	[Table("Setting")]
 	public partial class Setting
 	{
-		[Column, NotNull    ] public string SettingName  { get; set; } // text(max)
-		[Column,    Nullable] public string SettingValue { get; set; } // text(max)
+		[Column("Setting_Id"), PrimaryKey,  Identity] public long   SettingId    { get; set; } // integer
+		[Column(),             NotNull              ] public string SettingName  { get; set; } // text(max)
+		[Column(),                Nullable          ] public string SettingValue { get; set; } // text(max)
 	}
 
 	public static partial class TableExtensions
@@ -60,6 +61,12 @@ namespace WAM_Core.DataModels
 		{
 			return table.FirstOrDefault(t =>
 				t.AddonGuid == AddonGuid);
+		}
+
+		public static Setting Find(this ITable<Setting> table, long SettingId)
+		{
+			return table.FirstOrDefault(t =>
+				t.SettingId == SettingId);
 		}
 	}
 }
