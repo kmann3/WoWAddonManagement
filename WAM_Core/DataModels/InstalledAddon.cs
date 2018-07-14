@@ -63,6 +63,8 @@ namespace WAM_Core.DataModels
                 //{
                 //    repo.Network.Pull();
                 //}
+
+                addonToUpdate.LastCheckDate = DateTime.Now.ToString();
             }
         }
     }
